@@ -165,6 +165,47 @@ int vanya_and_fence()
 	return min_road_length;
 }
 
+
+string anton_and_danik()
+{
+	int games_number;
+    cin >> games_number;
+    string winners; 
+    cin >> winners;
+    int A_count = 0;
+    int D_count = 0;
+    
+    for (int i = 0; i < games_number; i++)
+    {
+        if(winners[i] == 'A')
+        {
+            A_count++;
+        }
+        else if(winners[i] == 'D')
+        {
+            D_count++;
+        }
+    }
+    
+    if(A_count > D_count)
+    {
+        cout << "Anton";
+		return "Anton";
+    }
+    else if(A_count < D_count)
+    {
+        cout << "Danik";
+		return "Danik";
+    }
+    else
+    {
+        cout << "Friendship";
+		return "Friendship";
+	}
+}
+
+
+
 void main()
 {
 	system("pause");
