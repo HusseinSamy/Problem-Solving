@@ -113,6 +113,33 @@ int watermelon ()
 
 }
 
+
+string[] way_too_long_words()
+{
+	int WORDS_NUMBERS;
+    cin>> WORDS_NUMBERS;
+   	string words[WORDS_NUMBERS]; 
+   
+   	for(int i = 0; i < WORDS_NUMBERS; i++) cin>> words[i];
+   	for(int i = 0; i < WORDS_NUMBERS; i++)
+	{
+       if(words[i].size() > 10)
+       {
+       char f_ch = words[i][0];
+       char l_ch = words[i][words[i].size() - 1];
+       int word_length = words[i].size() - 2;
+       words[i] = f_ch + to_string(word_length) + l_ch;
+       }
+ 
+   	}
+   
+   	for(int i = 0; i < WORDS_NUMBERS; i++){
+    	cout<< words[i] << endl;
+   	}
+	return words;
+}
+
+
 void main()
 {
 	system("pause");
