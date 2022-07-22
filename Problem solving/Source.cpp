@@ -204,6 +204,28 @@ string anton_and_danik()
 	}
 }
 
+int Bear_and_big_brother()
+{
+	int limak_weight;
+    int bob_weight;
+    
+    cin >> limak_weight;
+    cin >> bob_weight;
+    
+    int years_left = 0;
+    while(limak_weight <= bob_weight)
+    {
+         years_left++;
+         limak_weight*=3;
+         bob_weight*=2;
+    }
+    
+    cout << years_left;
+	return years_left;
+}
+
+
+
 
 
 void main()
