@@ -139,6 +139,31 @@ string[] way_too_long_words()
 	return words;
 }
 
+int vanya_and_fence()
+{
+	int number_of_friends; 
+    std::cin>> number_of_friends;
+    int height_of_friends[number_of_friends]; 
+    int fence_height;
+    std::cin>>fence_height;
+    std::cout << std::endl;
+    int min_road_length = 0;
+    for(int i = 0; i < number_of_friends; i++){
+    std::cin>> height_of_friends[i];
+    }
+    
+    for (int i = 0; i < number_of_friends; i++){
+        if(height_of_friends[i] > fence_height){
+            min_road_length += 2;
+        }
+        else{
+            min_road_length++;
+        }
+    }
+    
+    std::cout<< min_road_length;
+	return min_road_length;
+}
 
 void main()
 {
