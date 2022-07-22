@@ -95,10 +95,25 @@ string reverse_string2(string & str)
 	return str;
 }
 
+int watermelon ()
+{
+	double weight; 
+    cin>> weight;
+    if(weight == 2) cout<< "NO";
+    else if(floor(weight/2.0) == weight/2.0 )
+	{
+		cout<< "YES";
+		return 1;	
+	} 
+    else 
+	{
+		cout<<"NO";
+		return 0;
+	}
+
+}
+
 void main()
 {
-	string ex = "msilaiv ecnuoned ew\n tsae eurt daeh dna amed evael lliw uoy\n sotidnab era ew";
-	string res = rev(ex);
-	cout << res;
 	system("pause");
 }
