@@ -139,6 +139,35 @@ string[] way_too_long_words()
 	return words;
 }
 
+string decoding()
+{
+	int length;
+    cin >> length;
+    string word;
+    cin >> word;
+    string new_word;
+    char median_char; 
+    
+    while(length > 0)
+    {
+        if (length % 2 == 0)
+        {
+            new_word.insert(new_word.begin(),word[0]);
+            word.erase(word.begin());
+			length--;
+		}
+        else
+        {
+            new_word.insert(new_word.end(),word[0]);
+            word.erase(word.begin());
+			length--;
+        }
+    }
+    
+    cout << new_word; 
+	return new_word;
+}
+
 int vanya_and_fence()
 {
 	int number_of_friends; 
