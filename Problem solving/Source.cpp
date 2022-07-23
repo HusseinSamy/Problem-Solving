@@ -254,7 +254,78 @@ int Bear_and_big_brother()
 }
 
 
-
+int  petya_and_countryside()
+{
+	    int length; 
+    cin >> length; 
+    int land_height[length];
+    for (int i =0; i < length; i++)
+    {
+        cin >> land_height[i]; 
+    }
+    
+    int final[length];
+    for (int i =0; i < length; i++)
+    {
+       // cout << "i am in the main for loop" << endl;
+        int prev;
+        int next;
+        if (i == 0)
+        {
+            prev = 0;
+        }
+        else prev  = i - 1;
+        if (i == length - 1)
+        {
+            next = i;
+        }
+        else next = i + 1;
+        
+        int current_max = land_height[i];
+        int counter = 1;
+        while (prev != i || prev == -1)
+        {
+            //cout << "i am in the prev while loop" << endl;
+            if(land_height[prev] <= current_max)
+            {
+               // cout << "i am in the prev if statment" << endl;
+           // cout << "counter is: " << counter<< endl; 
+            // << "i is: " << i<< endl; 
+            counter++;
+            current_max = land_height[prev];
+            prev = prev - 1;
+            }
+            else 
+            {
+                current_max = land_height[i]; 
+                break;
+            }
+        }
+        
+        
+        while (next != i || next == length)
+        {
+           // cout << "i am in the next while loop" << endl;
+            if(land_height[next] <= current_max)
+            {
+               // cout << "i am in the next if statment" << endl;
+           // cout << "i is: " << i << endl; 
+            counter++;
+            current_max = land_height[next];
+            next = next + 1;
+            }
+            else 
+            {
+                current_max = land_height[i]; 
+                break;
+            }
+        }
+        
+        final[i] = counter;
+    }
+    cout << *std::max_element(final, final + length);
+	return *std::max_element(final, final + length);
+} 
 
 
 void main()
