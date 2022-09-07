@@ -49,6 +49,13 @@ void difference() {
     cout << "Difference = " << (a*b) - (c*d); 
 }
 
+void area_of_a_circle(){
+    float a, pi = 3.141592653;    
+    cin >> a; 
+    cout << fixed << setprecision(9) << (pi * pow(a, 2));
+    
+}
+
 int main () {
     
 }
