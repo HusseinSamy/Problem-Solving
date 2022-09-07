@@ -62,6 +62,11 @@ void digits_summation(){
     cout << a % 10 + b%10;
 }
 
+void summation_from_1_to_N(){
+    long long n;
+    cin >> n;
+    cout << (n*(n+1))/2;   
+}
 
 int main () {
     
