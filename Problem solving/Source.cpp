@@ -113,7 +113,6 @@ int watermelon ()
 
 }
 
-
 string[] way_too_long_words()
 {
 	int WORDS_NUMBERS;
@@ -194,7 +193,6 @@ int vanya_and_fence()
 	return min_road_length;
 }
 
-
 string anton_and_danik()
 {
 	int games_number;
@@ -252,7 +250,6 @@ int Bear_and_big_brother()
     cout << years_left;
 	return years_left;
 }
-
 
 int  petya_and_countryside()
 {
@@ -326,7 +323,6 @@ int  petya_and_countryside()
     cout << *std::max_element(final, final + length);
 	return *std::max_element(final, final + length);
 } 
-
 
 void main()
 {
