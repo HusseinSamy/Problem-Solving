@@ -56,6 +56,13 @@ void area_of_a_circle(){
     
 }
 
+void digits_summation(){
+    long long a,b;
+    cin >> a >> b;
+    cout << a % 10 + b%10;
+}
+
+
 int main () {
     
 }
