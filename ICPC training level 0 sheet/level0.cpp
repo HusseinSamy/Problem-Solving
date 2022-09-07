@@ -17,6 +17,13 @@ void simple_calculator() {
     << first_number - second_number;
 }
 
+
+void say_hello_in_cpp(){
+    string name; 
+    cin >> name; 
+    cout << "Hello, "<< name;
+}
+
 int main () {
     
 }
