@@ -39,6 +39,16 @@ void basic_data_types(){
     << e; 
 }
 
+void difference() {
+    long long a; 
+    long long b; 
+    long long c; 
+    long long d; 
+    
+    cin >> a >> b >> c >> d; 
+    cout << "Difference = " << (a*b) - (c*d); 
+}
+
 int main () {
     
 }
